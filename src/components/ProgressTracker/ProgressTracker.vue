@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-
 const props = defineProps<{ step: number }>();
 const steps = [1, 2, 3, 4];
 

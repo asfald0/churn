@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { defineEmits } from 'vue';
 import { Button, Card, CardFiller, Title } from '../../components';
-import { useMockState } from '../../store/mockState';
 
-const mockState = useMockState();
 const emit = defineEmits(['closeModal']);
 </script>
 

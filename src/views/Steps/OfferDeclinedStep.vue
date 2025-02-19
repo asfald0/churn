@@ -1,38 +1,8 @@
 <script setup lang="ts">
-import { ref, defineEmits } from 'vue';
-import { Button, Card, CardFiller, Title } from '../../components';
-import { useMockState } from '../../store/mockState';
+import { defineEmits } from 'vue';
+import { Button, Card, CardFiller } from '../../components';
 
-const mockState = useMockState();
 const emit = defineEmits(['closeModal']);
-interface CancellationReason {
-  value: string;
-  title: string;
-}
-
-const selectedReason = ref<string | null>(null);
-
-const cancellationReasons: CancellationReason[] = [
-  { value: 'Kuutasu on kallis', title: 'Kuutasu on kallis' },
-  {
-    value: 'Ei külasta Delfit piisavalt, et olla tellija',
-    title: 'Ei külasta Delfit piisavalt, et olla tellija',
-  },
-  {
-    value: 'Tehnilised probleemid kasutamisel',
-    title: 'Tehnilised probleemid kasutamisel',
-  },
-  {
-    value: 'Soovin reklaamivaba lugemist',
-    title: 'Soovin reklaamivaba lugemist',
-  },
-  { value: 'Muu', title: 'Muu' },
-];
-
-const handleSelection = (value: string) => {
-  selectedReason.value = value;
-  mockState.cancellationReason = value;
-};
 </script>
 
 <template>

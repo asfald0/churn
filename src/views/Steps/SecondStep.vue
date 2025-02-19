@@ -30,7 +30,7 @@ const cancellationReasons: CancellationReason[] = [
 ];
 
 watch(selectedReason, (newValue) => {
-  mockState.cancellationReason = newValue;
+  mockState.cancellationReason = newValue ?? '';
 });
 </script>
 

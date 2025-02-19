@@ -6,7 +6,6 @@ import {
   FirstStep,
   SecondStep,
   ThirdStep,
-  FourthStep,
   OfferAcceptedStep,
   OfferDeclinedStep,
 } from './views/';
@@ -34,10 +33,6 @@ const goToNextStep = () => {
 const offerAccepted = () => {
   mockState.activeStep = 5;
   mockState.acceptedOffer = true;
-};
-
-const offerDeclined = () => {
-  mockState.activeStep = 4;
 };
 </script>
 
